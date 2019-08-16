@@ -1,0 +1,154 @@
+.App {
+  text-align: center;
+}
+
+
+.App-header {
+  background: #1a2a6c;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to top, #fdbb2d, #b21f1f, #1a2a6c);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to top, #fdbb2d, #b21f1f, #1a2a6c); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 1vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+h1 {
+  display: flex;
+  font-size: 80px;
+  color: #0984e3;
+  position:absolute; 
+  top:-10%;
+}
+
+
+/* Image & IG Story Effect
+Story effect (source before modification): https://codepen.io/inertia/pen/MvGOeJ?editors=1100
+
+Added: Pause of animation start before new user load, coordinate fixes, stop animation after load.
+*/
+
+.img-round {
+
+  width:200px;
+  border-radius:50%;
+  position:absolute;
+  top:50%;
+  left:50%;
+  transform:translate(-50%,-50%); 
+}
+
+.story {
+  position:absolute;
+  top:50%;
+  left:50%;
+  transform:translate(-50%,-50%); 
+  width:240px;
+  height:240px;
+  overflow:hidden;
+}
+
+.story svg {
+  fill:none;
+  stroke:#8a3ab8;
+  width:240px;
+  height:240px;
+  stroke-width:3px;
+  stroke-dasharray:1;
+  stroke-dashoffset:0;
+  stroke-linecap:round;
+  animation: loading 4500ms ease-in-out infinite alternate ;
+}
+@keyframes loading {
+  100% {
+    stroke:#cd476b;
+    stroke-width: 4px;
+    stroke-dasharray:10;
+    transform:rotate(0deg);
+  }
+}
+
+
+
+
+/*  CARD */
+
+.card {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  float: left;
+  width: 450px;
+  height: 450px;
+  border-radius: 36px;
+  background: #fff;
+  -webkit-box-shadow: 3px 3px 7px rgba(0,0,0,0.3);
+  box-shadow: 3px 3px 7px rgba(0,0,0,0.3);  
+  
+}
+
+
+
+.card h3 {
+  text-align: center;
+  font: 18px;
+  color: #636e72;
+  font: bold;
+}
+
+.card p {
+  text-align: center;
+  font: 18px;
+  color: #636e72;
+  font: bold;
+  
+
+}
+
+.pBottom {
+
+  justify-content: baseline;
+  color: black;
+  bottom:20%;
+}
+
+.card .front {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  float: left;
+  width: 450px;
+  height: 450px;
+  border-radius: 36px;
+  background: #fff;
+}
+
+
+.card .back {
+  position: absolute;
+  float: left;
+  width: 450px;
+  height: 450px;
+  /* padding-top: 40px; */
+  border-radius: 36px;
+  background: #fff;
+  -webkit-box-shadow: 3px 3px 7px rgba(0,0,0,0.3);
+  box-shadow: 3px 3px 7px rgba(0,0,0,0.3);
+}
