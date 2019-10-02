@@ -30,7 +30,6 @@ class UserSummary extends React.Component {
 
 
     message = (userInfo === null) ? "Nothing to see here." : (
-
       <div className="card">
         <div className="front">
           <h1>{userInfo.name.first}</h1>
@@ -54,7 +53,8 @@ class UserSummary extends React.Component {
             </div>
           )
         }
-      </div >)
+      </div >
+    )
 
     return (
       <>

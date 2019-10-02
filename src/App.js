@@ -1,6 +1,7 @@
 import React from 'react';
 import './App.css';
 import UserSummary from './components/UserSummary';
+import logo from './rando-logo.svg'
 import { fetchUser } from './services/randomCall';
 
 class App extends React.Component {
@@ -32,12 +33,12 @@ class App extends React.Component {
     return (
 
       <header className="App-header">
+        <img src={logo} alt="logo" />
         <div onClick={this.refreshUser}>
           <UserSummary userData={this.state.currentUser} />
         </div>
 
         <p>Click a card to view a new user. Click a photo to view more info.</p>
-
       </header>
 
     );
