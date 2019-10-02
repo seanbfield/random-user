@@ -30,9 +30,9 @@ class UserSummary extends React.Component {
 
 
     message = (userInfo === null) ? "Nothing to see here." : (
+
       <div className="card">
         <div className="front">
-          {/* Flip animation will be used when user image is clicked. */}
           <h1>{userInfo.name.first}</h1>
           <div className="story">
             <svg>
@@ -44,9 +44,6 @@ class UserSummary extends React.Component {
 
 
         {
-          // function flip() {
-          //   $('.card').toggleClass('flipped');
-
           this.state.showMore && (
             <div className="back">
               <h3>Email:</h3> <p>{userInfo.email}</p>
@@ -57,11 +54,12 @@ class UserSummary extends React.Component {
             </div>
           )
         }
-        {/* } */}
       </div >)
 
     return (
-      <p>{message}</p>
+      <>
+        <p>{message}</p>
+      </>
     )
   }
 }

@@ -14,7 +14,6 @@ class App extends React.Component {
 
 
   refreshUser = async (event) => {
-    // event.preventDefault();
     const currentUser = await fetchUser(this.state.results);
     console.log(currentUser)
     this.setState((prevState) => ({
@@ -36,6 +35,8 @@ class App extends React.Component {
         <div onClick={this.refreshUser}>
           <UserSummary userData={this.state.currentUser} />
         </div>
+
+        <p>Click a card to view a new user. Click a photo to view more info.</p>
 
       </header>
 
