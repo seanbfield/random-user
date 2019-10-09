@@ -33,7 +33,6 @@ class App extends React.Component {
     return (
 
       <header className="App-header">
-        <img src={logo} alt="logo" />
         <div onClick={this.refreshUser}>
           <UserSummary userData={this.state.currentUser} />
         </div>
